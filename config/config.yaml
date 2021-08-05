@@ -1,0 +1,35 @@
+# !!! APPLYING CONFIG CHANGES REQUIRES SERVER RESTART !!!
+
+merakiDashboardApi:
+    apiKey: YOUR_DASHBOARD_API_KEY_HERE #must have write permission to cameras
+    organizationId: YOUR_ORGANIZATION_ID_HERE
+    snapshotRequestRetryIntervalSeconds: 5
+    maxSnapshotLinkFetchRetries: 100
+    
+mqttBroker:
+    host: 127.0.0.1 # change if Mosquitto is running on a different server
+    port: 1883
+    
+fileDownloader:
+    imagesFolderPath: "../images"
+    snapshotDownloadRetryIntervalSeconds: 2
+    maxFileDownloadRetries: 100
+       
+eventViewer:
+    requireAuthentication: false
+       
+mvSense:
+    minTriggerIntervalSeconds: 30
+    includePeopleDetections: true
+    includeVehicleDetections: false
+    
+    subscribeToRawDetections: true
+    rawDetectionsCameraSerialsList:
+        - AAAA-BBBB-CCCC #example
+        - BBBB-CCCC-DDDD #example
+        
+    subscribeToZoneTopics: false  
+    zoneTopicsList:
+        - "/merakimv/<camera1Serial>/<zoneId1>"	 #example
+        - "/merakimv/<camera2Serial>/<zoneId2>"	 #example
+    

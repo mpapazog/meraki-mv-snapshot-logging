@@ -1,0 +1,19 @@
+{
+  "name": "mqtt-meraki-entrance-logging",
+  "version": "1.0.0",
+  "description": "Logs screenshots of people detected entering area",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": ">=0.21.1",
+    "js-file-download": "^0.4.12",
+    "js-yaml": "^4.0.0",
+    "mqtt": "^4.2.6"
+  }
+}
